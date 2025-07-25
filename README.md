@@ -35,8 +35,8 @@
 
 # NoHumansRequired: Autonomous High-Quality Image Editing Triplet Mining
 
-> **Maksim Kuprashevich, Grigorii Alekseenko, [Irina Tolstykh](https://www.linkedin.com/in/irina-tolstykh-2a76111a2/), [Georgii Fedorov](https://github.com/georfed),
-[Bulat Suleimanov](https://github.com/bsuleymanov), Vladimir Dokholyan, Aleksandr Gordeev**
+> **[Maksim Kuprashevich](https://github.com/WildChlamydia), [Grigorii Alekseenko](https://github.com/Riko0), [Irina Tolstykh](https://www.linkedin.com/in/irina-tolstykh-2a76111a2/), [Georgii Fedorov](https://github.com/georfed),
+[Bulat Suleimanov](https://github.com/bsuleymanov), [Vladimir Dokholyan](https://github.com/Dokholyan), [Aleksandr Gordeev](https://github.com/gracikk-ds)**
 >
 > Recent advances in generative modeling enable image editing assistants that follow natural language instructions without additional user input. Their supervised training requires millions of triplets <original image, instruction, edited image>, yet mining pixel-accurate examples is hard. Each edit must affect only prompt-specified regions, preserve stylistic coherence, respect physical plausibility, and retain visual appeal. The lack of robust automated edit-quality metrics hinders reliable automation at scale. 
 We present an automated, modular pipeline that mines high-fidelity triplets across domains, resolutions, instruction complexities, and styles. Built on public generative models and running without human intervention, our system uses a task-tuned Gemini validator to score instruction adherence and aesthetics directly, removing any need for segmentation or grounding models. Inversion and compositional bootstrapping enlarge the mined set by $\approx 2.2\times$, enabling large-scale high-fidelity training data. By automating the most repetitive annotation steps, the approach allows a new scale of training without human labeling effort.
