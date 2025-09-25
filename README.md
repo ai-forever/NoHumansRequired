@@ -15,13 +15,19 @@
   <a href="https://huggingface.co/datasets/iitolstykh/NHR-Edit">
     <img
       src="https://img.shields.io/badge/NHR_Edit-Data-purple?logo=huggingface&logoColor=yellow"
-      alt="NHR-Edit Dataset"
+      alt="NHR-Edit Dataset (part1)"
     />
   </a>
-  <a href="https://huggingface.co/iitolstykh/Bagel-NHR-Edit">
+  <a href="https://huggingface.co/datasets/iitolstykh/NHR-Edit-part2">
+    <img
+      src="https://img.shields.io/badge/NHR_Edit-Data-purple?logo=huggingface&logoColor=yellow"
+      alt="NHR-Edit Dataset (part2)"
+    />
+  </a>
+  <a href="https://huggingface.co/iitolstykh/Bagel-NHR-Edit-V2">
     <img 
         src="https://img.shields.io/badge/Bagel_NHR_Edit-Model-yellow?logo=huggingface&logoColor=yellow" 
-        alt="BAGEL-NHR-Edit Model"
+        alt="BAGEL-NHR-Edit-V2 Model"
     />
   </a>
   <a href="https://huggingface.co/spaces/iitolstykh/BAGEL-NHR-Edit">
@@ -49,48 +55,43 @@ We also release **Bagel-NHR-Edit**, an open-source fine-tuned Bagel model, which
 
 ## 📢 News
 
-[17/07/2025] [NHR-Edit Dataset](https://huggingface.co/datasets/iitolstykh/NHR-Edit) and [Bagel-NHR-Edit](https://huggingface.co/iitolstykh/Bagel-NHR-Edit) has been published on HuggingFace.
+[17/07/2025] [NHR-Edit Dataset (part1)](https://huggingface.co/datasets/iitolstykh/NHR-Edit) and [Bagel-NHR-Edit](https://huggingface.co/iitolstykh/Bagel-NHR-Edit) has been published on HuggingFace.
 
 [18/07/2025] 🔥🔥🔥 Paper has been published on [Arxiv](https://arxiv.org/abs/2507.14119).
 
 [21/07/2025] **Bagel-NHR-Edit Demo** has been published on [HuggingFace 🤗](https://huggingface.co/spaces/iitolstykh/BAGEL-NHR-Edit).
 
+[11/09/2025] The second part of NHR-Edit Dataset has been released: [NHR-Edit Dataset (part2)](https://huggingface.co/datasets/iitolstykh/NHR-Edit-part2).
+
+[11/09/2025] [Bagel-NHR-Edit-V2](https://huggingface.co/iitolstykh/Bagel-NHR-Edit-V2) model, trained on full NHR-Edit Dataset (part1 + part2) has been published on HuggingFace 🤗
 
 ## NHR-Edit Dataset Info
 
-- Unique source images: 286,608
-- Instruction-image pairs (triplets): 358,463
+- Instruction-image pairs (triplets): 720,088
 - Image resolution: variable (metadata includes exact width/height)
 
 #### Category group distribution:
 <p align="left"><img src="https://raw.githubusercontent.com/Riko0/No-Humans-Required-Dataset/refs/heads/main/images/01_general_categories.jpg" width=42%"> <img src="https://raw.githubusercontent.com/Riko0/No-Humans-Required-Dataset/refs/heads/main/images/02_misc_breakdown.jpg" width=51%"></p>
 
-## Bagel-NHR-Edit Model Info
+## Bagel-NHR-Edit-V2 Model Info
 
-**Bagel-NHR-Edit** is a model fine-tuned on the NHR-Edit dataset using parameter-efficient LoRA adaptation on the generation expert’s attention and FFN projection layers.
-
-**PWC Leaderboards**: [ImgEdit](https://paperswithcode.com/sota/image-editing-on-imgedit-data?p=nohumansrequired-autonomous-high-quality), [GEdit-Bench-EN](https://paperswithcode.com/sota/image-editing-on-gedit-bench-en?p=nohumansrequired-autonomous-high-quality)
+**Bagel-NHR-Edit-V2** is a model fine-tuned on the full NHR-Edit dataset using parameter-efficient LoRA adaptation on the generation expert’s attention and FFN projection layers.
 
 #### Metrics for GEdit-Bench-EN:
 
-| Model         | GEdit-Bench-EN (SC) ↑ | GEdit-Bench-EN (PQ) ↑ | GEdit-Bench-EN (O) ↑|
-| ------------- | --------------------- | --------------------- | ------------------- |
-| BAGEL-7B-MoT  |          7.983        |        6.570          |       6.921         |
-| **BAGEL-NHR-Edit** | 8.067     | 6.881                 | 7.115               |
+| Model              | GEdit-Bench-EN (SC) ↑ | GEdit-Bench-EN (PQ) ↑ | GEdit-Bench-EN (O) ↑  |
+| ------------------ | --------------------- | --------------------- | --------------------- |
+| BAGEL-7B-MoT       |   7.610 ± 0.150       |   6.180 ± 0.150       |   6.530 ± 0.140       |
+| **BAGEL-NHR-Edit-V2** | **7.800 ± 0.070**     | **6.560 ± 0.080**     | **6.800 ± 0.070**     |
 > *Scoring model:* `gpt-4.1-2025-04-14` *(with default temperature)*
 
 #### Metrics for ImgEdit-Bench:
 
-| Model         | Style | Extract | Remove | Background | Action | Adjust | Add | Replace | Compose | Overall ↑ |
-| ------------- | ----- | ------- | ------ | -----------| ------ | ------ | ----| ------- | ------- | ------- |
-| BAGEL-7B-MoT  |      4.22|        1.53|       3.04|      3.3|        4.07|       3.67|      3.98|       3.5 |       3.0 |       3.3 |
-| **BAGEL-NHR-Edit** |      4.3|        1.62|       3.18|      3.42|        3.95|      3.55|      4.19|        3.77|       2.94|      3.39|
+| Model              | Style         | Extract       | Remove        | Background    | Action        | Adjust        | Add           | Replace       | Compose       | Overall ↑     |
+| ------------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
+| BAGEL-7B-MoT       | 4.20 ± 0.05   | 1.59 ± 0.10   | **3.16 ± 0.10** | 3.29 ± 0.06   | **3.96 ± 0.17** | **3.51 ± 0.20** | 3.98 ± 0.02   | **3.54 ± 0.11** | 2.93 ± 0.26   | 3.30 ± 0.03   |
+| **BAGEL-NHR-Edit-V2** | **4.28 ± 0.04** | **1.65 ± 0.07** | 3.12 ± 0.06   | **3.31 ± 0.02** | 3.81 ± 0.17   | 3.48 ± 0.12   | **4.19 ± 0.03** | 3.51 ± 0.06   | **2.99 ± 0.21** | **3.33 ± 0.02** |
 > *Scoring model:* `gpt-4o-2024-11-20` *(with temperature = 0.0)*
-
-Results comparison between original Bagel-7B-MoT and BAGEL-NHR-EDIT on samples from ImgEdit and GEdit benches:
-
-<p align="center"><img src="https://raw.githubusercontent.com/Riko0/No-Humans-Required-Dataset/refs/heads/main/images/Bagel_NHR_Edit_comp.jpg" width=85%"></p>
-
 
 ## Citation
 
