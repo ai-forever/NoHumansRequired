@@ -14,19 +14,19 @@
   </a>
   <a href="https://huggingface.co/datasets/iitolstykh/NHR-Edit">
     <img
-      src="https://img.shields.io/badge/NHR_Edit-Data-purple?logo=huggingface&logoColor=yellow"
+      src="https://img.shields.io/badge/NHR_Edit-part1-Data-purple?logo=huggingface&logoColor=yellow"
       alt="NHR-Edit Dataset (part1)"
     />
   </a>
   <a href="https://huggingface.co/datasets/iitolstykh/NHR-Edit-part2">
     <img
-      src="https://img.shields.io/badge/NHR_Edit-Data-purple?logo=huggingface&logoColor=yellow"
+      src="https://img.shields.io/badge/NHR_Edit-part2-Data-purple?logo=huggingface&logoColor=yellow"
       alt="NHR-Edit Dataset (part2)"
     />
   </a>
   <a href="https://huggingface.co/iitolstykh/Bagel-NHR-Edit-V2">
     <img 
-        src="https://img.shields.io/badge/Bagel_NHR_Edit-Model-yellow?logo=huggingface&logoColor=yellow" 
+        src="https://img.shields.io/badge/Bagel_NHR_Edit_V2-Model-yellow?logo=huggingface&logoColor=yellow" 
         alt="BAGEL-NHR-Edit-V2 Model"
     />
   </a>
