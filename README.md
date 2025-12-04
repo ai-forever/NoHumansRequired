@@ -39,7 +39,7 @@
   
 </p>
 
-# NoHumansRequired: Autonomous High-Quality Image Editing Triplet Mining
+# NoHumansRequired: Autonomous High-Quality Image Editing Triplet Mining (WACV 2026)
 
 > **[Maksim Kuprashevich](https://github.com/WildChlamydia), [Grigorii Alekseenko](https://github.com/Riko0), [Irina Tolstykh](https://www.linkedin.com/in/irina-tolstykh-2a76111a2/), [Georgii Fedorov](https://github.com/georfed),
 [Bulat Suleimanov](https://github.com/bsuleymanov), [Vladimir Dokholyan](https://github.com/Dokholyan), [Aleksandr Gordeev](https://github.com/gracikk-ds)**
